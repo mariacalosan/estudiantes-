@@ -1,0 +1,34 @@
+<h2>Listado de Estudiantes</h2>
+<%= @students %>
+<table>
+  <thead>
+    <tr>
+      <thead>
+        <tr>
+          <th>Nonbre<s/th>
+              <th>Correo</th>
+              <th>Fecha de Nacimiento</th>
+              <th>programa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pepito</td>
+              <td>pepito@sena.com</td>
+              <td>09/13/2000</td>
+              <td>diseño de moda</td>
+            </tr>
+
+          <% @students.each do |student| %>
+          <tr>
+            <td><%= student.nombre %><td>
+            <td><%= student.correo %><td>
+            <td><%= student.fecha_nacimiento %><td>
+            <td><%= student.programa %><td>
+
+          </tr>
+          <% end %>
+          </tbody>
+
+
+        </table>
